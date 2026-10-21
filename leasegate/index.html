@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>leasegate — the library</title>
+<meta name="description" content="Nothing on your machine holds standing power. Every process gets a lease.">
+<link rel="icon" href="../assets/leasegate.svg" type="image/svg+xml">
+<link rel="alternate icon" href="../assets/leasegate.ico" sizes="16x16 32x32 64x64">
+<link rel="apple-touch-icon" href="../assets/leasegate-256.png">
+<meta property="og:title" content="leasegate">
+<meta property="og:description" content="Nothing on your machine holds standing power. Every process gets a lease.">
+<meta property="og:image" content="https://leasegate.github.io/assets/leasegate-512.png">
+<meta property="og:url" content="https://leasegate.github.io/leasegate/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="leasegate">
+<div class="wrap">
+  <nav><a href="../">&larr; leasegate</a></nav>
+  <header>
+    <div class="mark"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/leasegate-dark.svg"><img src="../assets/leasegate.svg" alt="" width="64" height="64"></picture><h1>leasegate</h1></div>
+    <p class="tagline">Nothing on your machine holds standing power. Every process gets a lease.</p>
+    <p class="sub">The Java library that every gate is built on. Build your own gate for any credential.</p>
+  </header>
+  <section>
+    <h2>What it does</h2>
+    <ul class="points">
+      <li><strong>The kernel says who is asking.</strong> A client connects over a named pipe (Windows) or a Unix domain socket (macOS) that only the current user can open, and the gate asks the operating system for the connecting process id.</li>
+      <li><strong>A human sees the whole process chain before approving</strong>: the requesting program, its command line and working directory, and every ancestor up to the desktop.</li>
+      <li><strong>The approval is anchored, scoped and time-boxed.</strong> A broader anchor earns a shorter approval, and the approval ends the moment its anchor process exits.</li>
+      <li><strong>Nothing is permanent.</strong> Grants live in memory and expire, live connections are cut when they do, and a warning appears five minutes before.</li>
+      <li><strong>A passphrase stands behind the widest requests.</strong> The industry words for the idea are just-in-time access and zero standing privileges; leasegate brings them to the personal machine.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Get it</h2>
+    <p>From Maven Central, group <code>io.github.leasegate</code>. The modules are <code>leasegate-transport</code>, <code>leasegate-core</code>, <code>leasegate-vault</code>, <code>leasegate-sshagent</code>, <code>leasegate-tray</code>, <code>leasegate-frame</code> and <code>leasegate-ui</code>.</p>
+    <pre>&lt;dependency&gt;
+  &lt;groupId&gt;io.github.leasegate&lt;/groupId&gt;
+  &lt;artifactId&gt;leasegate-ui&lt;/artifactId&gt;
+  &lt;version&gt;0.2&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+    <div class="actions">
+      <a class="btn" href="https://central.sonatype.com/namespace/io.github.leasegate">Maven Central</a>
+      <a class="btn btn-ghost" href="https://github.com/leasegate/leasegate">Source on GitHub</a>
+    </div>
+  </section>
+  <footer>
+    <p><a href="../">leasegate.github.io</a> &nbsp;·&nbsp; <a href="https://github.com/leasegate/leasegate">github.com/leasegate/leasegate</a></p>
+  </footer>
+</div>
+</body>
+</html>

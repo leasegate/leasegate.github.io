@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bwgate — a vault behind a gate</title>
+<meta name="description" content="A Bitwarden or Vaultwarden vault that no program can open by itself, and a human who sees every request.">
+<link rel="icon" href="../assets/bwgate.svg" type="image/svg+xml">
+<link rel="alternate icon" href="../assets/bwgate.ico" sizes="16x16 32x32 64x64">
+<link rel="apple-touch-icon" href="../assets/bwgate-256.png">
+<meta property="og:title" content="bwgate">
+<meta property="og:description" content="A Bitwarden or Vaultwarden vault that no program can open by itself, and a human who sees every request.">
+<meta property="og:image" content="https://leasegate.github.io/assets/bwgate-512.png">
+<meta property="og:url" content="https://leasegate.github.io/bwgate/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="bwgate">
+<div class="wrap">
+  <nav><a href="../">&larr; leasegate</a></nav>
+  <header>
+    <div class="mark"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/bwgate-dark.svg"><img src="../assets/bwgate.svg" alt="" width="64" height="64"></picture><h1>bwgate</h1></div>
+    <p class="tagline">A Bitwarden or Vaultwarden vault that no program can open by itself, and a human who sees every request.</p>
+    <p class="sub">A leasegate gate in front of your vault. It is its own client, in plain Java: no <code>bw</code> executable and no session key in an environment variable.</p>
+  </header>
+  <section>
+    <h2>What it does</h2>
+    <ul class="points">
+      <li>The tray logs in with your master password and holds the decrypted vault key in its own memory. Nothing is written to disk.</li>
+      <li>A program asks for one thing: the names in a folder, one item's secrets, a change to one item, or moving one item to the trash. The approval window shows who is asking and exactly what they want.</li>
+      <li>Approvals are scoped by tier (<code>list</code>, <code>read</code>, <code>write</code>, <code>trash</code>), by folder and by item. Reaching the whole vault, or trashing anything, needs the master password typed again.</li>
+      <li><code>bwgate exec</code> puts a secret in one command's environment, so a credential can be used without reaching a shell history or a transcript.</li>
+      <li>Items are never deleted outright, only moved to the trash, so the trash is your undo.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Get it</h2>
+    <p>One file, which installs itself and keeps itself up to date. No administrator rights.</p>
+    <pre>curl.exe -fLo bwgate.exe https://github.com/leasegate/bwgate/releases/latest/download/bwgate.exe
+.\bwgate.exe install</pre>
+    <p class="note">64-bit Windows. Update later from the tray menu, <em>Check for updates</em>.</p>
+    <div class="actions">
+      <a class="btn" href="https://github.com/leasegate/bwgate/releases">Releases</a>
+      <a class="btn btn-ghost" href="https://github.com/leasegate/bwgate">Source on GitHub</a>
+    </div>
+  </section>
+  <footer>
+    <p><a href="../">leasegate.github.io</a> &nbsp;·&nbsp; <a href="https://github.com/leasegate/bwgate">github.com/leasegate/bwgate</a></p>
+  </footer>
+</div>
+</body>
+</html>

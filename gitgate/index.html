@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gitgate — git with the right identity</title>
+<meta name="description" content="git and the GitHub CLI, with the right identity for every folder and no credential lying around.">
+<link rel="icon" href="../assets/gitgate.svg" type="image/svg+xml">
+<link rel="alternate icon" href="../assets/gitgate.ico" sizes="16x16 32x32 64x64">
+<link rel="apple-touch-icon" href="../assets/gitgate-256.png">
+<meta property="og:title" content="gitgate">
+<meta property="og:description" content="git and the GitHub CLI, with the right identity for every folder and no credential lying around.">
+<meta property="og:image" content="https://leasegate.github.io/assets/gitgate-512.png">
+<meta property="og:url" content="https://leasegate.github.io/gitgate/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="gitgate">
+<div class="wrap">
+  <nav><a href="../">&larr; leasegate</a></nav>
+  <header>
+    <div class="mark"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/gitgate-dark.svg"><img src="../assets/gitgate.svg" alt="" width="64" height="64"></picture><h1>gitgate</h1></div>
+    <p class="tagline">git and the GitHub CLI, with the right identity for every folder and no credential lying around.</p>
+    <p class="sub">A leasegate gate for git and GitHub. Tokens and SSH keys stay in the gate; the official git keeps working unchanged.</p>
+  </header>
+  <section>
+    <h2>What it does</h2>
+    <ul class="points">
+      <li><strong>The official git, unchanged.</strong> <code>gitgate setup</code> makes the real <code>git</code> and Windows' own <code>ssh</code> work through the gate. It adds one line to your git config and one to your ssh config, and <code>gitgate setup --undo</code> removes them.</li>
+      <li><strong>Identity by organisation and folder.</strong> git picks the account's name and email on its own, from the organisation a remote points at or the folder the repository sits in.</li>
+      <li><strong>Each repository remembers its account.</strong> When the sources disagree, or nothing names the repository, gitgate does not guess: it asks the human in the tray, once.</li>
+      <li><strong>Keys and tokens never leave the gate.</strong> git over SSH asks the gate's agent to sign, and the GitHub CLI gets a token for one run. A human approves each request after seeing the whole process chain.</li>
+      <li><strong>Guard rails on push.</strong> A push to another account's organisation, commits under another identity, and any terms you list as forbidden are refused.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Get it</h2>
+    <p>One file, which installs itself and keeps itself up to date. No administrator rights.</p>
+    <pre>curl.exe -fLo gitgate.exe https://github.com/leasegate/gitgate/releases/latest/download/gitgate.exe
+.\gitgate.exe install</pre>
+    <p class="note">64-bit Windows. Update later from the tray menu, <em>Check for updates</em>.</p>
+    <div class="actions">
+      <a class="btn" href="https://github.com/leasegate/gitgate/releases">Releases</a>
+      <a class="btn btn-ghost" href="https://github.com/leasegate/gitgate">Source on GitHub</a>
+    </div>
+  </section>
+  <footer>
+    <p><a href="../">leasegate.github.io</a> &nbsp;·&nbsp; <a href="https://github.com/leasegate/gitgate">github.com/leasegate/gitgate</a></p>
+  </footer>
+</div>
+</body>
+</html>

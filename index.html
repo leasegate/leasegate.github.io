@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>leasegate — nothing holds standing power</title>
+<meta name="description" content="Time-limited, scoped, human-approved access to the credentials on a workstation, for CLI tools and AI agents.">
+<link rel="icon" href="assets/leasegate-org.svg" type="image/svg+xml">
+<link rel="alternate icon" href="assets/leasegate-org.ico" sizes="16x16 32x32 64x64">
+<link rel="apple-touch-icon" href="assets/leasegate-org-256.png">
+<meta property="og:title" content="leasegate">
+<meta property="og:description" content="Nothing on your machine holds standing power. Every process gets a lease.">
+<meta property="og:image" content="https://leasegate.github.io/assets/leasegate-org-500.png">
+<meta property="og:url" content="https://leasegate.github.io/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="mark"><img src="assets/leasegate-org.svg" alt="" width="64" height="64"><h1>leasegate</h1></div>
+    <p class="tagline">Nothing on your machine holds standing power. Every process gets a lease.</p>
+    <p class="sub">Time-limited, scoped, human-approved access to the credentials on a workstation, for CLI tools and AI agents.</p>
+  </header>
+
+  <section>
+    <p>A developer's or administrator's workstation holds a lot of power: SSH keys, API tokens, browser sessions, cloud credentials. They usually sit in plain files and environment variables, readable by every program the user runs. That was tolerable while the only thing running commands was the human. Now AI agents and automated tools run on the same machine with all of it in reach, and a single prompt injection can turn them.</p>
+    <p>A <strong>gate</strong> is a small tray application that holds a credential, or the only link to something powerful, and hands out access to it on three terms. The operating system says which process is asking. A human sees that process's whole chain, from the program up to the terminal that started it, before approving. And the approval is scoped and ends on its own.</p>
+  </section>
+
+  <section>
+    <h2>The gates</h2>
+    <div class="cards">
+      <a class="card gitgate" href="gitgate/">
+        <h3><picture><source media="(prefers-color-scheme: dark)" srcset="assets/gitgate-dark.svg"><img src="assets/gitgate.svg" alt=""></picture>gitgate</h3>
+        <p>git and the GitHub CLI, with the right identity for every folder and no credential lying around.</p>
+      </a>
+      <a class="card sshgate" href="sshgate/">
+        <h3><picture><source media="(prefers-color-scheme: dark)" srcset="assets/sshgate-dark.svg"><img src="assets/sshgate.svg" alt=""></picture>sshgate</h3>
+        <p>Server SSH keys that no program can read, and a human who sees every login.</p>
+      </a>
+      <a class="card bwgate" href="bwgate/">
+        <h3><picture><source media="(prefers-color-scheme: dark)" srcset="assets/bwgate-dark.svg"><img src="assets/bwgate.svg" alt=""></picture>bwgate</h3>
+        <p>A Bitwarden or Vaultwarden vault that no program can open by itself, and a human who sees every request.</p>
+      </a>
+      <a class="card cdpgate" href="cdpgate/">
+        <h3><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cdpgate-dark.svg"><img src="assets/cdpgate.svg" alt=""></picture>cdpgate</h3>
+        <p>Your real browser, driven only by the programs a human has approved, for the profiles and websites they chose.</p>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>The library</h2>
+    <div class="cards">
+      <a class="card leasegate" href="leasegate/">
+        <h3><picture><source media="(prefers-color-scheme: dark)" srcset="assets/leasegate-dark.svg"><img src="assets/leasegate.svg" alt=""></picture>leasegate</h3>
+        <p>The Java library every gate is built on: process chain, anchors, grants, approval windows, tray, vault. Build your own gate.</p>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p><a href="https://github.com/leasegate">github.com/leasegate</a> &nbsp;·&nbsp; <a href="https://central.sonatype.com/namespace/io.github.leasegate">Maven Central</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

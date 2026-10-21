@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sshgate — server SSH keys behind a gate</title>
+<meta name="description" content="Server SSH keys that no program can read, and a human who sees every login.">
+<link rel="icon" href="../assets/sshgate.svg" type="image/svg+xml">
+<link rel="alternate icon" href="../assets/sshgate.ico" sizes="16x16 32x32 64x64">
+<link rel="apple-touch-icon" href="../assets/sshgate-256.png">
+<meta property="og:title" content="sshgate">
+<meta property="og:description" content="Server SSH keys that no program can read, and a human who sees every login.">
+<meta property="og:image" content="https://leasegate.github.io/assets/sshgate-512.png">
+<meta property="og:url" content="https://leasegate.github.io/sshgate/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="sshgate">
+<div class="wrap">
+  <nav><a href="../">&larr; leasegate</a></nav>
+  <header>
+    <div class="mark"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/sshgate-dark.svg"><img src="../assets/sshgate.svg" alt="" width="64" height="64"></picture><h1>sshgate</h1></div>
+    <p class="tagline">Server SSH keys that no program can read, and a human who sees every login.</p>
+    <p class="sub">A leasegate gate for SSH: an ssh agent whose keys never leave it.</p>
+  </header>
+  <section>
+    <h2>What it does</h2>
+    <ul class="points">
+      <li>The keys live in sshgate's encrypted vault. sshgate is an <strong>ssh agent</strong> on its own named pipe, and the private key never leaves it.</li>
+      <li>Each key names the hosts it may be used for. A login anywhere else is refused without a window.</li>
+      <li>Every login goes through the approval window: which process is asking and its whole chain, which host, what command. The human chooses how far up the chain the approval reaches and for how long, and it ends when that process exits.</li>
+      <li>Ordinary <code>ssh</code> keeps working. sshgate writes its own ssh config file, and your <code>~/.ssh/config</code> includes it with one line. Your own entries are never touched.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Get it</h2>
+    <p>One file, which installs itself and keeps itself up to date. No administrator rights.</p>
+    <pre>curl.exe -fLo sshgate.exe https://github.com/leasegate/sshgate/releases/latest/download/sshgate.exe
+.\sshgate.exe install</pre>
+    <p class="note">64-bit Windows. Update later from the tray menu, <em>Check for updates</em>.</p>
+    <div class="actions">
+      <a class="btn" href="https://github.com/leasegate/sshgate/releases">Releases</a>
+      <a class="btn btn-ghost" href="https://github.com/leasegate/sshgate">Source on GitHub</a>
+    </div>
+  </section>
+  <footer>
+    <p><a href="../">leasegate.github.io</a> &nbsp;·&nbsp; <a href="https://github.com/leasegate/sshgate">github.com/leasegate/sshgate</a></p>
+  </footer>
+</div>
+</body>
+</html>

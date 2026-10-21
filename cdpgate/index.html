@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cdpgate — a browser behind a gate</title>
+<meta name="description" content="Your real browser, driven only by the programs a human has approved, for the profiles and websites they chose.">
+<link rel="icon" href="../assets/cdpgate.svg" type="image/svg+xml">
+<link rel="alternate icon" href="../assets/cdpgate.ico" sizes="16x16 32x32 64x64">
+<link rel="apple-touch-icon" href="../assets/cdpgate-256.png">
+<meta property="og:title" content="cdpgate">
+<meta property="og:description" content="Your real browser, driven only by the programs a human has approved, for the profiles and websites they chose.">
+<meta property="og:image" content="https://leasegate.github.io/assets/cdpgate-512.png">
+<meta property="og:url" content="https://leasegate.github.io/cdpgate/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body class="cdpgate">
+<div class="wrap">
+  <nav><a href="../">&larr; leasegate</a></nav>
+  <header>
+    <div class="mark"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/cdpgate-dark.svg"><img src="../assets/cdpgate.svg" alt="" width="64" height="64"></picture><h1>cdpgate</h1></div>
+    <p class="tagline">Your real browser, driven only by the programs a human has approved, for the profiles and websites they chose.</p>
+    <p class="sub">A leasegate gate for the Chrome DevTools Protocol. There is no debugging port to find.</p>
+  </header>
+  <section>
+    <h2>What it does</h2>
+    <ul class="points">
+      <li>cdpgate starts your browser with a debugging <strong>pipe</strong> instead of a port. The gate holds the pipe, so the browser's only automation link is one the gate controls.</li>
+      <li>A program that wants to drive the browser asks the gate. The approval window shows its whole process chain, and the human names the profiles and websites it may reach and for how long.</li>
+      <li>Traffic capture, cookie reading, page printing and form automation tools go through the same gate with the same approval, so one approval covers a working session.</li>
+      <li>Nothing is permanent. Approvals expire, and a refused or expired call says why.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Get it</h2>
+    <p>One file, which installs itself and keeps itself up to date. No administrator rights.</p>
+    <pre>curl.exe -fLo cdpgate.exe https://github.com/cdpai/gate/releases/latest/download/cdpgate.exe
+.\cdpgate.exe install</pre>
+    <p class="note">64-bit Windows. Update later from the tray menu, <em>Check for updates</em>. The releases live in the cdpai organisation.</p>
+    <div class="actions">
+      <a class="btn" href="https://github.com/cdpai/gate/releases">Releases</a>
+      <a class="btn btn-ghost" href="https://github.com/cdpai/gate">Source on GitHub</a>
+    </div>
+  </section>
+  <footer>
+    <p><a href="../">leasegate.github.io</a> &nbsp;·&nbsp; <a href="https://github.com/cdpai/gate">github.com/cdpai/gate</a></p>
+  </footer>
+</div>
+</body>
+</html>

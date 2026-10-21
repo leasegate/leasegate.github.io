@@ -2,9 +2,19 @@
   "format" : 1,
   "app" : "io.github.cdpai:cdpgate",
   "channels" : {
-    "beta" : "0.2.1-beta.1"
+    "beta" : "0.2.1-beta.1",
+    "stable" : "0.2.1"
   },
   "releases" : [ {
+    "version" : "0.2.1",
+    "released" : "2026-10-21T13:24:57Z",
+    "exe" : {
+      "windows-x86_64" : {
+        "sha256" : "dbf1290ddafb7ed2237c1820409e8278c97db3ee97560153b37b8a010a7c6bac",
+        "urls" : [ "https://github.com/cdpai/gate/releases/download/v0.2.1/cdpgate.exe" ]
+      }
+    }
+  }, {
     "version" : "0.2.1-beta.1",
     "released" : "2026-10-21T12:44:20Z",
     "exe" : {

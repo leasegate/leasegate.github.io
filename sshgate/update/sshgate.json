@@ -1,0 +1,26 @@
+{
+  "format" : 1,
+  "app" : "io.github.leasegate:sshgate",
+  "channels" : {
+    "beta" : "0.2.1-beta.2"
+  },
+  "releases" : [ {
+    "version" : "0.2.1-beta.2",
+    "released" : "2026-10-21T11:56:58Z",
+    "exe" : {
+      "windows-x86_64" : {
+        "sha256" : "101a665237e787251810fd81eb4e6545466143df06feb63a02d031e1b2332956",
+        "urls" : [ "https://github.com/leasegate/sshgate/releases/download/v0.2.1-beta.2/sshgate.exe" ]
+      }
+    }
+  }, {
+    "version" : "0.2.1-beta.1",
+    "released" : "2026-10-21T11:56:06Z",
+    "exe" : {
+      "windows-x86_64" : {
+        "sha256" : "7383fc5a76256fea383020e1283e7629ea40352736cf950ee94528e8da794614",
+        "urls" : [ "https://github.com/leasegate/sshgate/releases/download/v0.2.1-beta.1/sshgate.exe" ]
+      }
+    }
+  } ]
+}

@@ -1,0 +1,17 @@
+{
+  "format" : 1,
+  "app" : "io.github.leasegate:bwgate",
+  "channels" : {
+    "beta" : "0.2.1-beta.1"
+  },
+  "releases" : [ {
+    "version" : "0.2.1-beta.1",
+    "released" : "2026-10-21T12:41:23Z",
+    "exe" : {
+      "windows-x86_64" : {
+        "sha256" : "6214ab1a55148c97a854ac58ce1d349267f8cbfc93c9585f9fbf05bd82868512",
+        "urls" : [ "https://github.com/leasegate/bwgate/releases/download/v0.2.1-beta.1/bwgate.exe" ]
+      }
+    }
+  } ]
+}

@@ -1,0 +1,17 @@
+{
+  "format" : 1,
+  "app" : "io.github.leasegate:gitgate",
+  "channels" : {
+    "beta" : "0.2.1-beta.1"
+  },
+  "releases" : [ {
+    "version" : "0.2.1-beta.1",
+    "released" : "2026-10-21T12:42:10Z",
+    "exe" : {
+      "windows-x86_64" : {
+        "sha256" : "addfbe14e5ef74104e5d936df0b7025f253ad226a6da85cced4d08574678fd94",
+        "urls" : [ "https://github.com/leasegate/gitgate/releases/download/v0.2.1-beta.1/gitgate.exe" ]
+      }
+    }
+  } ]
+}

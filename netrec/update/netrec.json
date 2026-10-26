@@ -1,0 +1,21 @@
+{
+  "format" : 1,
+  "app" : "io.github.cdpai:netrec",
+  "channels" : {
+    "beta" : "0.3-beta.1"
+  },
+  "releases" : [ {
+    "version" : "0.3-beta.1",
+    "released" : "2026-10-26T12:11:41Z",
+    "exe" : {
+      "windows-x86_64" : {
+        "sha256" : "f4ffc48ce201790a6319784f39b032ab041c104356e4bde8277fb8620c356627",
+        "urls" : [ "https://github.com/cdpai/netrec/releases/download/v0.3-beta.1/netrec.exe" ]
+      },
+      "macos-universal" : {
+        "sha256" : "1e39f9aafc6da36f8dce10856a8402de9eda6a933f05208c61fea1979bc1f4a6",
+        "urls" : [ "https://github.com/cdpai/netrec/releases/download/v0.3-beta.1/netrec" ]
+      }
+    }
+  } ]
+}

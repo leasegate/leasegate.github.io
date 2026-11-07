@@ -2,9 +2,23 @@
   "format" : 1,
   "app" : "io.github.cdpai:cdpg",
   "channels" : {
-    "beta" : "0.2.2-beta.1"
+    "beta" : "0.2.2-beta.1",
+    "stable" : "0.2.2"
   },
   "releases" : [ {
+    "version" : "0.2.2",
+    "released" : "2026-11-07T19:15:00Z",
+    "exe" : {
+      "windows-x86_64" : {
+        "sha256" : "570757583e0c5ff315c1283530a2befff877ce3ce4336c6152e760887a7d988c",
+        "urls" : [ "https://github.com/cdpai/gate/releases/download/v0.2.2/cdpg.exe" ]
+      },
+      "macos-universal" : {
+        "sha256" : "07257959fe196ea42df7db6238e634118ecc2351efcdc0666311b594d0071fae",
+        "urls" : [ "https://github.com/cdpai/gate/releases/download/v0.2.2/cdpg" ]
+      }
+    }
+  }, {
     "version" : "0.2.2-beta.1",
     "released" : "2026-10-26T11:47:34Z",
     "exe" : {

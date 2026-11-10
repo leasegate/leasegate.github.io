@@ -3,9 +3,22 @@
   "app" : "io.github.cdpai:cdpg",
   "channels" : {
     "beta" : "0.2.2-beta.1",
-    "stable" : "0.2.2"
+    "stable" : "0.2.3"
   },
   "releases" : [ {
+    "version" : "0.2.3",
+    "released" : "2026-11-10T22:00:54Z",
+    "exe" : {
+      "windows-x86_64" : {
+        "sha256" : "a77ad9f4e13235a843651b766445658d9eb0a3c20236a137a1ae09354900398d",
+        "urls" : [ "https://github.com/cdpai/gate/releases/download/v0.2.3/cdpg.exe" ]
+      },
+      "macos-universal" : {
+        "sha256" : "c2b71c8515af8b8b26fe049aff5db2ae1284b24844b4ee088751b4d3514c537f",
+        "urls" : [ "https://github.com/cdpai/gate/releases/download/v0.2.3/cdpg" ]
+      }
+    }
+  }, {
     "version" : "0.2.2",
     "released" : "2026-11-07T19:15:00Z",
     "exe" : {

@@ -3,9 +3,26 @@
   "app" : "io.github.cdpai:cdpgate",
   "channels" : {
     "beta" : "0.2.2-beta.1",
-    "stable" : "0.2.2"
+    "stable" : "0.2.3"
   },
   "releases" : [ {
+    "version" : "0.2.3",
+    "released" : "2026-11-10T22:01:23Z",
+    "exe" : {
+      "windows-x86_64" : {
+        "sha256" : "ddf8c78704dd34f6581c324bd7706d95ed08b0798de114022a726e0058d0f12f",
+        "urls" : [ "https://github.com/cdpai/gate/releases/download/v0.2.3/cdpgate.exe" ]
+      },
+      "macos-arm64" : {
+        "sha256" : "8cc30ec01659552f20602010e91ccd3656efa7507b11b577c8b10b72c33e5bda",
+        "urls" : [ "https://github.com/cdpai/gate/releases/download/v0.2.3/cdpgate-macos-arm64" ]
+      },
+      "macos-x86_64" : {
+        "sha256" : "b25e6c0c0be479393f8e5c146771d5876cbb2f162510e8091198b10f1fb67134",
+        "urls" : [ "https://github.com/cdpai/gate/releases/download/v0.2.3/cdpgate-macos-x86_64" ]
+      }
+    }
+  }, {
     "version" : "0.2.2",
     "released" : "2026-11-07T19:15:31Z",
     "exe" : {

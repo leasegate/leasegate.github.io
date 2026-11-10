@@ -38,6 +38,9 @@
     <pre>curl.exe -fLo cdpgate.exe https://github.com/cdpai/gate/releases/latest/download/cdpgate.exe
 .\cdpgate.exe install</pre>
     <p class="note">64-bit Windows. Update later from the tray menu, <em>Check for updates</em>. The releases live in the cdpai organisation.</p>
+    <p>On a Mac (Apple silicon or Intel), in Terminal:</p>
+    <pre>curl -fLo /tmp/cdpgate https://github.com/cdpai/gate/releases/latest/download/cdpgate-macos-$(uname -m) &amp;&amp; chmod +x /tmp/cdpgate &amp;&amp; /tmp/cdpgate -Xjr:install</pre>
+    <p class="note">The command line, <code>cdpg</code>, is in the same release: <code>cdpg.exe</code> on Windows, <code>cdpg</code> on a Mac.</p>
     <div class="actions">
       <a class="btn" href="https://github.com/cdpai/gate/releases">Releases</a>
       <a class="btn btn-ghost" href="https://github.com/cdpai/gate">Source on GitHub</a>
